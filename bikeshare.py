@@ -187,7 +187,7 @@ def trip_duration_stats(df):
     start_time = time.time()
 
     total_seconds = df['Trip Duration'].sum()
-    print(total_seconds)
+    # print(total_seconds)
     if total_seconds < 1:
         print("Unable to provide a total or mean travel time!")
     else:
