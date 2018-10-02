@@ -8,7 +8,7 @@ CITY_DATA = {'chicago': 'chicago.csv',
              'washington': 'washington.csv'}
 
 MONTH_DATA = {'All': 'all', 'Jan': 'january', 'Feb': 'february', 'Mar': 'march',
-              'Apr': 'april', 'May': 'may', 'Jun': 'june'}  #
+              'Apr': 'april', 'May': 'may', 'Jun': 'june'}
 
 DAY_DATA = {'All': 'all', 'Sun': 'Sunday', 'Mon': 'Monday', 'Tue': 'Tuesday', 'Wed': 'Wednesday',
             'Thu': 'Thursday', 'Fri': 'Friday', 'Sat': 'Saturday'}
@@ -184,12 +184,12 @@ def station_stats(df):
     # TO DO: display most frequent combination of start station and end station trip
     row = df.groupby(['Start Station', 'End Station']).size().reset_index(name='trip_count') \
         .sort_values(by='trip_count', ascending=False).head(1).values[0]
-    start_name = row[0]
-    end_name = row[1]
-    name_count = format_num(row[2])
+    start = row[0]
+    end = row[1]
+    stn_count = format_num(row[2])
 
-    print('The most popular trip started at {} and ended at {}, a total of {} times'.format(start_name, end_name,
-                                                                                            name_count))
+    print('The most popular trip started at {} and ended at {}, a total of {} times'.format(start, end,
+                                                                                            stn_count))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-' * 40)
@@ -202,7 +202,7 @@ def trip_duration_stats(df):
     start_time = time.time()
 
     total_seconds = df['Trip Duration'].sum()
-    print(total_seconds)
+    # print(total_seconds)
     if total_seconds < 1:
         print("Unable to provide a total or mean travel time!")
     else:
