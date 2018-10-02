@@ -3,7 +3,7 @@
 ### Explore US Bikeshare Data
 
 ### Description
-Describe what your project is about and what it does
+The project is designed to provide a Python code script which can answer interesting questions about Bikeshare data by computing statistics based on user input.
 
 ### Files used
 Include the files used
