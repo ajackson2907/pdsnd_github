@@ -15,17 +15,32 @@ DAY_DATA = {'All': 'all', 'Sun': 'Sunday', 'Mon': 'Monday', 'Tue': 'Tuesday', 'W
 
 
 def check_filter(filt):
-    """ Checks user input matches the prescibed list of filter options """
+    """
+    Checks user input matches the prescibed list of filter options
+
+    Returns:
+    A bool (true/false) if the provided string is in the array
+    """
     return filt not in ['Raw', 'Format']
 
 
 def check_month(month):
-    """ Checks user input matches the prescribed list of month options """
+    """
+    Checks user input matches the prescribed list of month options
+
+    Returns:
+    A bool (true/false) if the provided string is in the array
+    """
     return month not in ['All', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']
 
 
 def check_day(day):
-    """ Checks user input matches the prescribed list of day options """
+    """
+    Checks user input matches the prescribed list of day options 
+
+    Returns:
+    A bool (true/false) if the provided string is in the array
+    """
     return day not in ['All', 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
 
 
