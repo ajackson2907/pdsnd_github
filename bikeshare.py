@@ -169,12 +169,12 @@ def station_stats(df):
     # TO DO: display most frequent combination of start station and end station trip
     row = df.groupby(['Start Station', 'End Station']).size().reset_index(name='trip_count') \
         .sort_values(by='trip_count', ascending=False).head(1).values[0]
-    start_name = row[0]
-    end_name = row[1]
-    name_count = format_num(row[2])
+    start = row[0]
+    end = row[1]
+    stn_count = format_num(row[2])
 
-    print('The most popular trip started at {} and ended at {}, a total of {} times'.format(start_name, end_name,
-                                                                                            name_count))
+    print('The most popular trip started at {} and ended at {}, a total of {} times'.format(start, end,
+                                                                                            stn_count))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-' * 40)
