@@ -10,4 +10,9 @@ The project is designed to provide a Python code script which can answer interes
 * CSV data files (not included in repo)
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+To help me complete the project and produce a functional script I referred to the following websites:
+* https://www.stackoverflow.com
+* https://docs.python.org/3/
+* http://pandas.pydata.org/pandas-docs/version/0.23/
+
+Thank you to [Udacity](https://www.udacity.com) for providing this introduction to Data Sciences course.
